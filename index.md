@@ -1,8 +1,19 @@
 ---
 layout: default
-title: Home
 ---
 
-# Welcome to My Programming Course!
+# Curs programare C/C++
 
-This is written in Markdown and will be converted to HTML.
+## Structura
+
+- Introducere in programare
+  - notiuni de baza despre componentele calculatorului
+  - ce este un program
+  - hello world
+  - citire afisare la consola
+- Tipuri de date simple si operatori
+  - ce sunt variabilele
+  - exercitii precum suma / diferenta numerelor, diferite operatii pe numere intregi, zecimale
+  - operatori binari, unari
+- Instructiuni conditionale: if, operator ternar
+- Instructiuni repetitive: while, do - while, for
