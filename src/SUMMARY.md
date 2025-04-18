@@ -8,4 +8,6 @@
 - [Instalare Tooluri necesare](01-getting-started/02-instalare-tooluri.md)
 - [Primul tau program: Hello world!](01-getting-started/03-hello-world.md)
 
-## [Bibliografie](bibliografie.md)
+# Bibliografie
+
+- [Bibliografie](bibliografie.md)
