@@ -1,9 +1,9 @@
 [book]
-authors = ["Tyler McCann (@tylerdotrar)"]
+authors = ["Relu Dragan"]
 language = "en"
 multilingual = false
 src = "src"
-title = "Example mdBook Site"
+title = "Curs programare C/C++"
 
 [build]
 build-dir = "public"

@@ -1,13 +1,14 @@
-# Summary
+# Cuprins
 
-# Primary Section
+# Introducere in programare
 
-- [mdBook Github Page Creation](Primary%20Directory/mdBook_GithubPages_Creation.md)
+- [Componentele calculatorului](introducere-in-programare/componentele-calculatorului.md)
 
-# Secondary Section
+# Structuri de date
 
-- [Obsidian Markdown Comparison](Secondary%20Directory/Obsidian_Markdown_Comparison.md)
+- [Arrays](structuri-de-date/array.md)
+- [Vectori](structuri-de-date/vector.md)
 
-# Tertiary Section
+# Exercitii aditionale
 
-- [Export-Obsidian.ps1](Tertiary%20Directory/Export-Obsidian.md)
+- [Exercitii](exercitii/exercitii.md)
