@@ -237,10 +237,7 @@ int main() {
 <h3 id="instructiunea-using-namespace"><a class="header" href="#instructiunea-using-namespace">Instructiunea using namespace</a></h3>
 <pre><code class="language-C++">using namespace std;
 </code></pre>
-<p>Daca <strong>nu</strong> am pune aceasta instructiune, atunci programul nostru ar da urmatoarea eroare in urma compilarii:</p>
-<pre><code>TODO
-</code></pre>
-<p>Programul nostru nu recunoaste instructiunile "cout" si "endl". Desi acestea apartin de bilbioteca "iostream" pe care am inclus-o, ele fac parte si din namespace-ul "std". Un namespace pentru instructiuni este ca un director pentru fisiere. Imaginati-va ca daca vreti sa creati doua fisiere cu acelasi nume in sistemul de operare, le puteti plasa in directoare cu nume diferite pentru a evita conflictul de nume. La fel, daca aveti doua instructiuni cu acelasi nume dar care fac lucruri diferite, le puteti plasa in namespace-uri diferite.</p>
+<p>Daca <strong>nu</strong> am pune aceasta instructiune, atunci programul nostru ar da o eroare in urma compilarii. Programul nostru nu ar recunoaste instructiunile "cout" si "endl". Desi acestea apartin de bilbioteca "iostream" pe care am inclus-o, ele fac parte si din namespace-ul "std". Un namespace pentru instructiuni este ca un director pentru fisiere. Imaginati-va ca daca vreti sa creati doua fisiere cu acelasi nume in sistemul de operare, le puteti plasa in directoare cu nume diferite pentru a evita conflictul de nume. La fel, daca aveti doua instructiuni cu acelasi nume dar care fac lucruri diferite, le puteti plasa in namespace-uri diferite.</p>
 <p>Fara aceasta instructiune, programul nostru ar compila cu succes daca l-am scrie astfel:</p>
 <pre><code class="language-C++">#include &lt;iostream&gt;
 
@@ -309,10 +306,11 @@ Not all those who wander are lost.
 <p>"Stricati" programul pentru a observa cum se comporta compilatorul si ce mesaje de eroare va apar la consola in fiecare dintre cazurile urmatoare:</p>
 <p>a. Stergeti diezul <code>#</code> din fata instructiunii <code>include</code></p>
 <p>b. Inlocuiti <code>iostream</code> cu o biblioteca inexistenta precum <code>iostreamm</code></p>
-<p>c. Stergeti acolada deschisa <code>{</code></p>
-<p>d. Stergeti acolada inchisa <code>}</code></p>
-<p>e. Stergeti punctul si virgula de la sfarsitul instructiunii <code>cout &lt;&lt; "Hello world!" &lt;&lt; endl;</code></p>
-<p>f. Stergeti instructiunea <code>return 0;</code></p>
+<p>c. Stergeti instructiunea <code>using namespace std;</code></p>
+<p>d. Stergeti acolada deschisa <code>{</code></p>
+<p>e. Stergeti acolada inchisa <code>}</code></p>
+<p>f. Stergeti punctul si virgula de la sfarsitul instructiunii <code>cout &lt;&lt; "Hello world!" &lt;&lt; endl;</code></p>
+<p>g. Stergeti instructiunea <code>return 0;</code></p>
 </li>
 </ol>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="citirea-si-afisarea-datelor"><a class="header" href="#citirea-si-afisarea-datelor">Citirea si afisarea datelor</a></h1>
