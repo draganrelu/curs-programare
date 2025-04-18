@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Exercitii - Curs programare C/C++</title>
+        <title>Programe si limbaje de programare - Curs programare C/C++</title>
 
 
         <!-- Custom HTML head -->
@@ -155,15 +155,50 @@
 
                 <div id="content" class="content">
                     <main>
-                        
+                        <h1 id="programe-si-limbaje-de-programare"><a class="header" href="#programe-si-limbaje-de-programare">Programe si limbaje de programare</a></h1>
+<p>Un program este un set de instructiuni bine definit, pe care calculatorul le executa intr-o ordine precisa, pentru a obtine un rezultat sau pentru a produce un efect dorit de utilizator.</p>
+<blockquote>
+<p>De exemplu, aplicatia "Calculator" din sistemul de operare Windows este un program care accepta ca date de intrare o expresie matematica precum <code>22 + 7 - 13 * 2</code>, efectueaza calculul acesteia si, apoi, rezultatul pe ecran <code>3</code>. Fiecare dintre acesti pasi (citirea datelor de intrare - expresia matematica, calculul acesteia, afisarea rezultatului pe ecran) este codificat cu un set precis de instructiuni intr-un limbaj de programare.</p>
+</blockquote>
+<p>Calculatorul executa sau "ruleaza" acest set de instructiuni sau "programul" pe componentele sale hardware. Un calculator este compus din:</p>
+<ul>
+<li><strong>CPU</strong> (Central Processing Unit) - procesorul - este "creierul" calculatorului, executa instructiunile specificate in program.</li>
+<li><strong>Memoria RAM</strong> (Random-access memory) - locul in care programele sunt incarcate temporar pentru a fi executate de catre procesor. Datele din memoria RAM se pierd la restartarea calculatorului.</li>
+<li><strong>Dispozitive de stocare persistenta</strong> (hard disk, SSD) - locul in care fisierele utilizatorilor sau ale sistemului de operare sunt stocate. Acestea nu se pierd daca calculatorul este restartat.</li>
+<li><strong>Dispozitive interactive</strong> (mouse, tastatura, monitor, boxe, touch screen) - folosite pentru a realiza interactiunea dintre calculator si utilizator.</li>
+</ul>
+<h2 id="limbaj-masina"><a class="header" href="#limbaj-masina">Limbaj masina</a></h2>
+<p>Procesorul unui calculator (CPU) nu poate intelege instructiunile limbajului C/C++, insa poate intelege ceea ce se numeste <strong>limbaj masina</strong>. O instructiune in limbaj masina arata astfel:</p>
+<pre><code>10110000 01100001
+</code></pre>
+<p>Aceste instructiuni sunt formate din secvente de <code>0</code> si <code>1</code>, sau secvente de <strong>biti</strong>. Un <strong>bit</strong> este unitatea fundamentala de stocare in memorie si poate lua valori de <strong>0</strong> sau <strong>1</strong>. O secventa de mai multi biti poate codifica o informatie mai complexa cum ar fi un sir de caractere "Ana are mere" sau un numar intreg 2321. Vom aprofunda acest lucru mai tarziu.</p>
+<p>Prin comparatie, o instructiune in limbajul C/C++ arata astfel:</p>
+<pre><code>num = num + 5;
+</code></pre>
+<p>Aceasta instructiune adauga la variabila "num" valoarea 5. Limbajul C/C++ precum si alte limbaje de programare sunt in <strong>format text</strong> si pot fi intelese mai usor de utilizatori, spre deosebire de limbajul masina care sunt in <strong>format binar</strong> (adica compuse din secvente de biti <strong>0</strong> si <strong>1</strong>).</p>
+<blockquote>
+<p>Fun fact: La inceput cand calculatoarele au fost inventate, limbajele de programare inca nu existau si oamenii trebuiau sa scrie programele direct in limbaj masina.</p>
+</blockquote>
+<p>Insa, cum ajunge calculatorul nostru sa execute instructiunile limbajului C/C++?</p>
+<h2 id="etapele-executiei-unui-program"><a class="header" href="#etapele-executiei-unui-program">Etapele executiei unui program</a></h2>
+<p>Pentru executia unui program scris intr-un limbaj de programare (precum C/C++), sunt necesare <strong>doua</strong> etape:</p>
+<ol>
+<li><strong>Compilare programului</strong> - in aceasta etapa, limbajul C/C++ este convertit in limbaj masina cu ajutorul unui <strong>compilator</strong>.</li>
+<li><strong>Rularea/Executia programului</strong> - in aceasta etapa, procesorul va rula instructiunile limbajului masina generat si va produce efectele dorite de utilizator.</li>
+</ol>
+<p>Vom discuta mai in detaliu despre acestea in lectiile urmatoare.</p>
+
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../structuri-de-date/vector.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../introducere.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
+                            <a rel="next prefetch" href="../01-getting-started/02-instalare-tooluri.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
 
                         <div style="clear: both"></div>
                     </nav>
@@ -171,10 +206,13 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../structuri-de-date/vector.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../introducere.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
+                    <a rel="next prefetch" href="../01-getting-started/02-instalare-tooluri.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
             </nav>
 
         </div>
