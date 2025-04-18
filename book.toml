@@ -1,6 +1,6 @@
 [book]
 authors = ["Relu Dragan"]
-language = "en"
+language = "ro"
 multilingual = false
 src = "src"
 title = "Curs programare C/C++"

@@ -1,5 +1,7 @@
 # Cuprins
 
+[Introducere](introducere.md)
+
 # Introducere in programare
 
 - [Componentele calculatorului](introducere-in-programare/componentele-calculatorului.md)
