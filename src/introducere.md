@@ -8,4 +8,4 @@ Limbajul de programare folosit in acest curs este C/C++. Am ales acest limbaj de
 
 Daca aveti intrebari sau sugestii, imi puteti scrie un email la draganrelu@gmail.com.
 
-Mult success!
+### Mult success!
