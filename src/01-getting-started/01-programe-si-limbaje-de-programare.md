@@ -1,8 +1,27 @@
 # Programe si limbaje de programare
 
-Un program este un set de instructiuni bine definit, pe care calculatorul le executa intr-o ordine precisa, pentru a obtine un rezultat sau pentru a produce un efect dorit de utilizator.
+Un program este un set de instructiuni bine definit, pe care calculatorul le executa intr-o ordine precisa, pentru a obtine un rezultat sau pentru a produce un efect dorit de utilizator. Un program poate accepta un set de date de intrare si, in urma executiei, sa produca un set de date de iesire.
 
-> De exemplu, aplicatia "Calculator" din sistemul de operare Windows este un program care accepta ca date de intrare o expresie matematica precum `22 + 7 - 13 * 2`, efectueaza calculul acesteia si, apoi, rezultatul pe ecran `3`. Fiecare dintre acesti pasi (citirea datelor de intrare - expresia matematica, calculul acesteia, afisarea rezultatului pe ecran) este codificat cu un set precis de instructiuni intr-un limbaj de programare.
+<img src="img/date-intrare-iesire.png" alt="date-intrare-iesire" style="width:30%;" />
+
+## Exemple de programe
+
+Aplicatia "Calculator" din sistemul de operare Windows este un program care accepta ca date de intrare o expresie matematica precum `22 + 7 - 13 * 2`, efectueaza calculul acesteia si, apoi afiseaza rezultatul pe ecran `3` (datele de iesire). Fiecare dintre acesti pasi (citirea datelor de intrare - expresia matematica, calculul acesteia, afisarea rezultatului pe ecran) este codificat cu un set precis de instructiuni intr-un limbaj de programare.
+
+Datele de intrare pentru un program nu sunt intotdeauna necesare. De exemplu, aplicatia "Weather" de pe telefonul mobil nu accepta date de intrare de la utilizator, insa afiseaza ca date de iesire starea vremii.
+
+Jocurile pe calculator sunt programe care accepta mai multe tipuri de date de intrare:
+
+- miscarea mouse-ului
+- tastele apasate
+- comenzi vocale (in unele jocuri)
+
+Si produc mai multe tipuri de date de iesire:
+
+- vizuale, pe ecranul monitorului: miscarea protagonistului, actualizarea scorului, animatii
+- audio: muzica, sunete specifice jocului
+
+## Componentele calculatorului
 
 Calculatorul executa sau "ruleaza" acest set de instructiuni sau "programul" pe componentele sale hardware. Un calculator este compus din:
 
@@ -29,7 +48,7 @@ num = num + 5;
 
 Aceasta instructiune adauga la variabila "num" valoarea 5. Limbajul C/C++ precum si alte limbaje de programare sunt in **format text** si pot fi intelese mai usor de utilizatori, spre deosebire de limbajul masina care sunt in **format binar** (adica compuse din secvente de biti **0** si **1**).
 
-> Fun fact: La inceput cand calculatoarele au fost inventate, limbajele de programare inca nu existau si oamenii trebuiau sa scrie programele direct in limbaj masina.
+> 💡 Fun fact: La inceput cand calculatoarele au fost inventate, limbajele de programare inca nu existau si oamenii trebuiau sa scrie programele direct in limbaj masina.
 
 Insa, cum ajunge calculatorul nostru sa execute instructiunile limbajului C/C++?
 
