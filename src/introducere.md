@@ -6,4 +6,6 @@ Am creat acest site in timpul liber pentru a-i ajuta pe cei pasionati de tehnolo
 
 Limbajul de programare folosit in acest curs este C/C++. Am ales acest limbaj deoarece acesta este limbajul cu care si eu am inceput si este momentan limbajul predominant in clasele de informatica din liceu.
 
-Mult success! Daca aveti intrebari sau sugestii, imi puteti scrie un email la draganrelu@gmail.com
+Daca aveti intrebari sau sugestii, imi puteti scrie un email la draganrelu@gmail.com.
+
+Mult success!
