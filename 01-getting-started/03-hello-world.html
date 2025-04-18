@@ -156,7 +156,111 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="primul-tau-program-hello-world"><a class="header" href="#primul-tau-program-hello-world">Primul tau program: Hello world!</a></h1>
-<p>TODO</p>
+<pre><code class="language-C++">#include &lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+    cout &lt;&lt; "Hello world!" &lt;&lt; endl;
+    return 0;
+}
+</code></pre>
+<p>Programul de mai sus, in urma rularii, afiseaza la consola urmatorul mesaj:</p>
+<pre><code>Hello world!
+</code></pre>
+<p>Observam ca acest program este compus din mai multe instructiuni. Le vom explica pe fiecare pe rand:</p>
+<h3 id="instructiunea-include"><a class="header" href="#instructiunea-include">Instructiunea include</a></h3>
+<pre><code class="language-C++">#include &lt;iostream&gt;
+</code></pre>
+<p>Cu ajutorul acesteia, includem in programul nostru biblioteca "iostream". O biblioteca este o colectie de cod deja existenta si implementata, pe care o putem folosi in programul nostru.</p>
+<p>Mai precis, biblioteca "iostream" contine instructiuni care ne ajuta in citirea si afisarea datelor la consola, de exemplu instructiunile <code>cin</code> si <code>cout</code>.</p>
+<p>Un alt exemplu de biblioteca este biblioteca "fstream" care contine instructiuni si metode pentru a citi / afisa date in fisiere text.</p>
+<p>Putem include mai multe biblioteci in programul nostru astfel:</p>
+<pre><code class="language-C++">#include &lt;iostream&gt;
+#include &lt;fstream&gt;
+</code></pre>
+<p>In toate programele noastre vom folosi fie biblioteca <strong>iostream</strong> fie biblioteca <strong>fstream</strong>, fie ambele, pentru a face programul nostru sa interactioneze cu date de intrare / iesire.</p>
+<h3 id="instructiunea-using-namespace"><a class="header" href="#instructiunea-using-namespace">Instructiunea using namespace</a></h3>
+<pre><code class="language-C++">using namespace std;
+</code></pre>
+<p>Daca <strong>nu</strong> am pune aceasta instructiune, atunci programul nostru ar da urmatoarea eroare in urma compilarii:</p>
+<pre><code>TODO
+</code></pre>
+<p>Programul nostru nu recunoaste instructiunile "cout" si "endl". Desi acestea apartin de bilbioteca "iostream" pe care am inclus-o, ele fac parte si din namespace-ul "std". Un namespace pentru instructiuni este ca un director pentru fisiere. Imaginati-va ca daca vreti sa creati doua fisiere cu acelasi nume in sistemul de operare, le puteti plasa in directoare cu nume diferite pentru a evita conflictul de nume. La fel, daca aveti doua instructiuni cu acelasi nume dar care fac lucruri diferite, le puteti plasa in namespace-uri diferite.</p>
+<p>Fara aceasta instructiune, programul nostru ar compila cu succes daca l-am scrie astfel:</p>
+<pre><code class="language-C++">#include &lt;iostream&gt;
+
+int main() {
+    std::cout &lt;&lt; "Hello world!" &lt;&lt; std::endl;
+    return 0;
+}
+</code></pre>
+<p>Observati ca am folosit:</p>
+<ul>
+<li><code>std::cout</code> in loc de <code>cout</code></li>
+<li><code>std::endl</code> in loc de <code>endl</code></li>
+</ul>
+<p>In concluzie, <code>using namespace std</code> ii spune programului nostru sa includa toate instructiunile din namespace-ul <code>std</code>, fara a mai fi nevoie sa le specificam noi pe fiecare cu <code>std::</code>.</p>
+<blockquote>
+<p>❗ Atentie! Dupa fiecare instructiune trebuie sa punem punct si virgula (;). Punctul si virgula marcheaza sfarsitul unei instructiuni si inceputul urmatoarei instructiuni. Observati ce eroare va da programul vostru daca stergeti punctul si virgula de dupa <code>using namespace std;</code>.</p>
+</blockquote>
+<h3 id="functia-main"><a class="header" href="#functia-main">Functia main()</a></h3>
+<p>Aceasta reprezinta punctul din care programul nostru incepe executia instructiunilor. O functie in programare este un subprogram, sau, mai bine zis, reprezinta un set de instructiuni care vor fi executate intr-o anumita ordine. Vom discuta mai mult despre functii in lectiile urmatoare.</p>
+<p><img src="img/main-function-explained.png" alt="Main function explained" /></p>
+<h3 id="afisarea"><a class="header" href="#afisarea">Afisarea</a></h3>
+<pre><code class="language-C++">cout &lt;&lt; "Hello world!" &lt;&lt; endl;
+</code></pre>
+<p>Aceasta instructiune este cea care afiseaza mesajul "Hello world!" la consola. De fapt, aici sunt doua instructiuni. Codul de mai sus este echivalent cu:</p>
+<pre><code class="language-C++">cout &lt;&lt; "Hello world!";
+cout &lt;&lt; endl;
+</code></pre>
+<p><code>cout</code> vine de la "console output" si este o instructiune din biblioteca "iostream" pe care am inclus-o mai sus. Aceasta trebuie sa fie urmata de operatorul "&lt;&lt;" care trebuie sa fie urmat la randul sau de un sir de caractere (mesaj) sau de o variabila, etc. Instructiunea se incheie cu punct si virgula la final (;).</p>
+<p>Prima instructiune de mai sus afiseaza sirul de caractere "Hello world!" la consola.</p>
+<p>A doua instructiune "sare linia" sau, mai precis, afiseaza la consola caracterul newline care forteaza trecerea pe linia urmatoare. De exemplu programul de mai jos:</p>
+<pre><code class="language-C++">cout &lt;&lt; "Hello world!";
+cout &lt;&lt; endl;
+cout &lt;&lt; "Hello again!";
+</code></pre>
+<p>Afiseaza:</p>
+<pre><code>Hello world!
+Hello again!
+</code></pre>
+<p>Dar daca nu am sterge <code>cout &lt;&lt; endl;</code>, atunci programul ar afisa:</p>
+<pre><code>Hello world!Hello again!
+</code></pre>
+<h2 id="exercitii"><a class="header" href="#exercitii">Exercitii</a></h2>
+<p>Pornind de la programul:</p>
+<pre><code class="language-C++">#include &lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+    cout &lt;&lt; "Hello world!" &lt;&lt; endl;
+    return 0;
+}
+</code></pre>
+<ol>
+<li>Modificati programul in asa fel incat sa se afiseze la consola mesajul:</li>
+</ol>
+<pre><code>Speak friend and enter!
+</code></pre>
+<ol start="2">
+<li>Modificati programul in asa fel incat sa se afiseze la consola mesajul:</li>
+</ol>
+<pre><code>Death is just another path.
+Not all those who wander are lost.
+</code></pre>
+<ol start="3">
+<li>
+<p>"Stricati" programul pentru a observa cum se comporta compilatorul si ce mesaje de eroare va apar la consola in fiecare dintre cazurile urmatoare:</p>
+<p>a. Stergeti diezul <code>#</code> din fata instructiunii <code>include</code></p>
+<p>b. Inlocuiti <code>iostream</code> cu o biblioteca inexistenta precum <code>iostreamm</code></p>
+<p>c. Stergeti acolada deschisa <code>{</code></p>
+<p>d. Stergeti acolada inchisa <code>}</code></p>
+<p>e. Stergeti punctul si virgula de la sfarsitul instructiunii <code>cout &lt;&lt; "Hello world!" &lt;&lt; endl;</code></p>
+<p>f. Stergeti instructiunea <code>return 0;</code></p>
+</li>
+</ol>
 
                     </main>
 
