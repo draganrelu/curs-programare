@@ -46,13 +46,7 @@ In toate programele noastre vom folosi fie biblioteca **iostream** fie bibliotec
 using namespace std;
 ```
 
-Daca **nu** am pune aceasta instructiune, atunci programul nostru ar da urmatoarea eroare in urma compilarii:
-
-```
-TODO
-```
-
-Programul nostru nu recunoaste instructiunile "cout" si "endl". Desi acestea apartin de bilbioteca "iostream" pe care am inclus-o, ele fac parte si din namespace-ul "std". Un namespace pentru instructiuni este ca un director pentru fisiere. Imaginati-va ca daca vreti sa creati doua fisiere cu acelasi nume in sistemul de operare, le puteti plasa in directoare cu nume diferite pentru a evita conflictul de nume. La fel, daca aveti doua instructiuni cu acelasi nume dar care fac lucruri diferite, le puteti plasa in namespace-uri diferite.
+Daca **nu** am pune aceasta instructiune, atunci programul nostru ar da o eroare in urma compilarii. Programul nostru nu ar recunoaste instructiunile "cout" si "endl". Desi acestea apartin de bilbioteca "iostream" pe care am inclus-o, ele fac parte si din namespace-ul "std". Un namespace pentru instructiuni este ca un director pentru fisiere. Imaginati-va ca daca vreti sa creati doua fisiere cu acelasi nume in sistemul de operare, le puteti plasa in directoare cu nume diferite pentru a evita conflictul de nume. La fel, daca aveti doua instructiuni cu acelasi nume dar care fac lucruri diferite, le puteti plasa in namespace-uri diferite.
 
 Fara aceasta instructiune, programul nostru ar compila cu succes daca l-am scrie astfel:
 
@@ -152,10 +146,12 @@ Not all those who wander are lost.
 
    b. Inlocuiti `iostream` cu o biblioteca inexistenta precum `iostreamm`
 
-   c. Stergeti acolada deschisa `{`
+   c. Stergeti instructiunea `using namespace std;`
 
-   d. Stergeti acolada inchisa `}`
+   d. Stergeti acolada deschisa `{`
 
-   e. Stergeti punctul si virgula de la sfarsitul instructiunii `cout << "Hello world!" << endl;`
+   e. Stergeti acolada inchisa `}`
 
-   f. Stergeti instructiunea `return 0;`
+   f. Stergeti punctul si virgula de la sfarsitul instructiunii `cout << "Hello world!" << endl;`
+
+   g. Stergeti instructiunea `return 0;`
