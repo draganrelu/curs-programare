@@ -2,7 +2,7 @@
 
 Un program este un set de instructiuni bine definit, pe care calculatorul le executa intr-o ordine precisa, pentru a obtine un rezultat sau pentru a produce un efect dorit de utilizator. Un program poate accepta un set de date de intrare si, in urma executiei, sa produca un set de date de iesire.
 
-<img src="img/date-intrare-iesire.png" alt="date-intrare-iesire" style="width:50%;" />
+<img src="img/date-intrare-iesire.png" alt="date-intrare-iesire" style="width:30%;" />
 
 ## Exemple de programe
 
