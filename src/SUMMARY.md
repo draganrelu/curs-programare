@@ -2,15 +2,19 @@
 
 [Introducere](introducere.md)
 
-# Introducere in programare
+# Getting started
 
-- [Componentele calculatorului](introducere-in-programare/componentele-calculatorului.md)
+- [Programe si limbaje de programare](01-getting-started/01-programe-si-limbaje-de-programare.md)
+- [Instalare Tooluri necesare](01-getting-started/02-instalare-tooluri.md)
+- [Primul tau program: Hello world!](01-getting-started/03-hello-world.md)
+- [Citirea si afisarea datelor](01-getting-started/04-citire-afisare.md)
+- [Tipuri de date si operatori](01-getting-started/05-tipuri-de-date-operatori.md)
 
-# Structuri de date
+# Control flow
 
-- [Arrays](structuri-de-date/array.md)
-- [Vectori](structuri-de-date/vector.md)
+- [Instructiuni conditionale](02-control-flow/01-instructiuni-conditionale.md)
+- [Instructiuni repetitive](02-control-flow/02-instructiuni-repetitive.md)
 
-# Exercitii aditionale
+# Bibliografie
 
-- [Exercitii](exercitii/exercitii.md)
+- [Bibliografie](bibliografie.md)
