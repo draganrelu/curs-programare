@@ -117,6 +117,38 @@ Observatii:
 
 Pentru a opera cu variabile intr-un program, este necesara `declararea` / `definirea` acestora. De exemplu prin `int x;` ii spunem compilatorului ca vom folosi o variabila de tip intreg, cu nume `x`.
 
+De exemplu, programul urmator nu va compila cu succes si va arunca o eroare, deoarece variabila 'x' nu este cunoscuta la linia 4:
+
+```C++
+1 #include <iostream>
+2 using namespace std;
+3 int main() {
+4     x = 5;
+5    cout << x << endl;
+6 }
+```
+
+Putem declara variabile multiple pe aceeasi linie, si variabile de mai multe tipuri:
+
+```C++
+int numar1, numar2;
+float numar3, numar4;
+char ch1, ch2;
+```
+
+Codul de mai sus este echivalent cu:
+
+```C++
+int numar1;
+int numar2;
+float numar3;
+float numar4;
+char ch1;
+char ch2;
+```
+
 ### Initializarea variabilelor
 
 ### Atribuirea
+
+## Exercitii
