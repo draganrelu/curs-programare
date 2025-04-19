@@ -112,6 +112,19 @@ Dar daca nu am sterge `cout << endl;`, atunci programul ar afisa:
 Hello world!Hello again!
 ```
 
+Terminatorul de linie `endl` poate fi inlocuit mai sus cu caracterul newline `\n` pentru a produce acelasi efect:
+
+```C++
+cout << "Hello world!";
+cout << '\n';
+cout << "Hello again!";
+```
+
+```
+Hello world!
+Hello again!
+```
+
 ## Exercitii
 
 Pornind de la programul:
