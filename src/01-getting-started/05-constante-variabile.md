@@ -147,6 +147,13 @@ char ch1;
 char ch2;
 ```
 
+> Atentie! Aceeasi variabila nu poate fi declarata de mai multe ori! Observati ce eroare produce urmatorul program la compilare:
+
+```
+int numar1;
+int numar1;
+```
+
 ### Initializarea variabilelor
 
 Variabilele pot fi initializate cu o anumita valoare in momentul in care sunt declarate:
@@ -155,11 +162,13 @@ Variabilele pot fi initializate cu o anumita valoare in momentul in care sunt de
 int contor = 0; // initializare variabila cu valoarea 0
 cout << "Valoare: " << contor << endl;
 ```
+
 ```
 Valoare: 0
 ```
 
 Este echivalent cu a scrie:
+
 ```C++
 int contor;
 contor = 0;
@@ -173,8 +182,7 @@ int var1;
 cout << "Variabila neinitializata: " << var1 << endl;
 ```
 
-Va afisa o valoare aleatorie cuprinsa in intervalul `[–2147483648, 2147483647]`. 
-
+Va afisa o valoare aleatorie cuprinsa in intervalul `[–2147483648, 2147483647]`.
 
 ### Atribuirea
 
@@ -191,6 +199,7 @@ y2 = -3.2;
 
 cout << x1 << " " << x2 << " " << y1 << " " << y2;
 ```
+
 ```
 55 44 2.3 -3.2
 ```
@@ -212,6 +221,7 @@ y2 = x2; // y2 primeste valoarea stocata in x2, care este 33
 
 cout << x1 << x2 << y1 << y2;
 ```
+
 ```
 44 33 44 33
 ```
@@ -219,6 +229,7 @@ cout << x1 << x2 << y1 << y2;
 ## Exercitii
 
 1. Ce va afisa urmatorul program:
+
 ```C++
 1 #include <iostream>
 2 using namespace std;
@@ -241,7 +252,9 @@ cout << x1 << x2 << y1 << y2;
 ```
 
 2. Modificati instructiunea de la linia 10 cu:
+
 ```
 4 = x1;
 ```
+
 Ce observati?
