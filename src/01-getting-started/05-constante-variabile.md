@@ -149,6 +149,99 @@ char ch2;
 
 ### Initializarea variabilelor
 
+Variabilele pot fi initializate cu o anumita valoare in momentul in care sunt declarate:
+
+```C++
+int contor = 0; // initializare variabila cu valoarea 0
+cout << "Valoare: " << contor << endl;
+```
+```
+Valoare: 0
+```
+
+Este echivalent cu a scrie:
+```C++
+int contor;
+contor = 0;
+cout << "Valoare: " << contor << endl;
+```
+
+Variabilele declarate dar neinitializate stocheaza in general o valoare aleatorie. De exemplu, daca rulati urmatorul program care afiseaza o variabila neinitializata:
+
+```C++
+int var1;
+cout << "Variabila neinitializata: " << var1 << endl;
+```
+
+Va afisa o valoare aleatorie cuprinsa in intervalul `[–2147483648, 2147483647]`. 
+
+
 ### Atribuirea
 
+Variabilele pot fi setate cu o anumita valoare folosing operatorul de atribuire (`=`):
+
+```C++
+int x1, x2;
+float y1, y2;
+x1 = 23;
+x2 = 44;
+x1 = 55;
+y1 = 2.3;
+y2 = -3.2;
+
+cout << x1 << " " << x2 << " " << y1 << " " << y2;
+```
+```
+55 44 2.3 -3.2
+```
+
+Observati ca variabilei `x1` i-a fost atribuita valoarea `23` si apoi valoarea `55`. Variabilele retin doar ultima valoare atribuita.
+
+Variabilelor le pot fi atribuite valori continute in alte variabile:
+
+```C++
+int x1, x2;
+int y1, y2;
+
+x1 = 33;
+x2 = x1; // x2 primeste valoarea stocata in x1, care este 33
+
+x1 = 44;
+y1 = x1; // y1 primeste valoarea stocata in x1, care este 44
+y2 = x2; // y2 primeste valoarea stocata in x2, care este 33
+
+cout << x1 << x2 << y1 << y2;
+```
+```
+44 33 44 33
+```
+
 ## Exercitii
+
+1. Ce va afisa urmatorul program:
+```C++
+1 #include <iostream>
+2 using namespace std;
+3 int main() {
+4     int x1 = 25, x2 = 45, x3;
+5     float y1, y2, y3;
+6     y1 = x3;
+7     y2 = 44.5;
+8     y3 = x2;
+9     y3 = -1.2;
+10    x1 = 4;
+11    cout << "x1= " << x1 << endl;
+12    cout << "x2= " << x2 << endl;
+13    cout << "x3= " << x3 << endl;
+14    cout << "y1= " << y1 << endl;
+15    cout << "y2= " << y2 << endl;
+16    cout << "y3= " << y3 << endl;
+17    return 0;
+18 }
+```
+
+2. Modificati instructiunea de la linia 10 cu:
+```
+4 = x1;
+```
+Ce observati?
