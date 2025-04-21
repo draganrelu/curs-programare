@@ -405,10 +405,201 @@ Comentariile sunt optionale si in practica nu se pun asa de des.
 Se pun doar in cazul in care codul este prea greu de inteles
 si este suficient sa citim comentariul pentru a intelege ce face codul.
 </code></pre>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="citirea-si-afisarea-datelor"><a class="header" href="#citirea-si-afisarea-datelor">Citirea si afisarea datelor</a></h1>
-<p>TODO</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="tipuri-de-date-si-operatori"><a class="header" href="#tipuri-de-date-si-operatori">Tipuri de date si operatori</a></h1>
-<p>TODO</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="date-constante-si-variabile"><a class="header" href="#date-constante-si-variabile">Date: Constante si Variabile</a></h1>
+<p>Pentru a produce rezultatul dorit de catre utilizator, programele opereaza cu date. Datele pot fi mai de mai multe tipuri:</p>
+<ul>
+<li>intregi: <code>5</code>, <code>-7</code>, <code>123</code></li>
+<li>zecimale: <code>12.54</code>, <code>-1.2</code></li>
+<li>caractere: <code>'H'</code>, <code>'C'</code>, <code>'a'</code></li>
+<li>siruri de caractere / text: <code>"Hello world!"</code>, <code>"How you doing?"</code></li>
+</ul>
+<p>Cele de mai sus sunt date constante, deoarece ele nu se modifica pe parcursul programului. Cu alte cuvinte, putem spune ca aceste date sunt cunoscute in momentul compilarii programului. Le putem afisa astfel:</p>
+<pre><code class="language-C++">#include &lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+    cout &lt;&lt; "Afisare de numere intregi: ";
+    // observati ca afisam cate un caracter spatiu (' ') printre numere pentru a le separa
+    cout &lt;&lt; 5 &lt;&lt; ' ' &lt;&lt; -7 &lt;&lt; ' ' &lt;&lt; 123 &lt;&lt; endl;
+    cout &lt;&lt; "Afisare de numere zecimale: ";
+    // observati ca afisam cate un caracter spatiu (' ') printre numere pentru a le separa
+    cout &lt;&lt; 12.54 &lt;&lt; ' ' &lt;&lt; -1.2 &lt;&lt; endl;
+    cout &lt;&lt; "Afisare de caractere: ";
+    // observati ca afisam cate un caracter spatiu (' ') printre caractere pentru a le separa
+    cout &lt;&lt; 'H' &lt;&lt; ' ' &lt;&lt; 'C' &lt;&lt; ' ' &lt;&lt; 'a' &lt;&lt; endl;
+    cout &lt;&lt; "Siruri de caractere: " &lt;&lt; endl;
+    cout &lt;&lt; "Hello world!" &lt;&lt; endl;
+    cout &lt;&lt; "How you doing?" &lt;&lt; endl;
+
+    return 0;
+}
+</code></pre>
+<pre><code>Afisare de numere intregi: 5 -7 123
+Afisare de numere zecimale: 12.54 -1.2
+Afisare de caractere: H C a
+Siruri de caractere:
+Hello world!
+How you doing?
+</code></pre>
+<blockquote>
+<p>Atentie! Daca nu am pune caracterul spatiu (<code>' '</code>) printre elementele afisate, ele s-ar afisa ingramadite:</p>
+</blockquote>
+<pre><code class="language-C++">cout &lt;&lt; "Afisare de numere intregi: ";
+cout &lt;&lt; 5 &lt;&lt; -7 &lt;&lt; 123 &lt;&lt; endl;
+cout &lt;&lt; "Afisare de caractere: ";
+cout &lt;&lt; 'H' &lt;&lt; 'C' &lt;&lt; 'a' &lt;&lt; endl;
+</code></pre>
+<pre><code>Afisare de numere intregi: 5-7123
+Afisare de caractere: HCa
+</code></pre>
+<h2 id="variabile"><a class="header" href="#variabile">Variabile</a></h2>
+<p>Programele pot lucra si cu date care se modifica pe parcursul executiei programului. De exemplu, aplicatia Calculator din Windows primeste ca date de intrare o expresie matematica, insa acea expresie matematica poate fi modificata si recalculata de fiecare data cand utilizatorul doreste. Astfel, programele au nevoie de "variabile" pentru a opera cu astfel de date.</p>
+<p>Pornind de la programul de mai jos care afiseaza niste numere intregi:</p>
+<pre><code class="language-C++">#include &lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+    cout &lt;&lt; "Afisare de numere intregi:" &lt;&lt; endl;
+    cout &lt;&lt; 5 &lt;&lt; endl;
+    cout &lt;&lt; -7 &lt;&lt; endl;
+    cout &lt;&lt; 123 &lt;&lt; endl;
+
+    return 0;
+}
+</code></pre>
+<pre><code>Afisare de numere intregi:
+5
+-7
+123
+</code></pre>
+<p>Il putem modifica folosind o variabila de tip intreg, astfel:</p>
+<pre><code class="language-C++">#include &lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+    cout &lt;&lt; "Afisare de numere intregi:" &lt;&lt; endl;
+
+    int numar; // declarare variabila de tip 'int' (intreg), cu numele 'numar'
+
+    numar = 5; // folosim operatorul atribuire ('=') pentru a asigna variabilei 'numar' valoarea intreaga '5'
+    cout &lt;&lt; numar &lt;&lt; endl; // se va afisa 5 la consola
+
+    numar = -7; // folosim operatorul atribuire ('=') pentru a asigna variabilei 'numar' valoarea intreaga '-7'
+    cout &lt;&lt; numar &lt;&lt; endl; // se va afisa -7 la consola
+
+    numar = 123; // folosim operatorul atribuire ('=') pentru a asigna variabilei 'numar' valoarea intreaga '123'
+    cout &lt;&lt; numar &lt;&lt; endl; // se va afisa 123 la consola
+
+    return 0;
+}
+</code></pre>
+<p>Observatii:</p>
+<ul>
+<li>variabila de tip intreg <code>numar</code> a fost refolosita pentru a stoca succesiv valorile intregi <code>5</code>, <code>-7</code>, <code>123</code>.</li>
+<li><code>cout &lt;&lt; numar</code> afisarea unei variabile va afisa de fapt ultima valoare stocata in variabila respectiva.</li>
+</ul>
+<h3 id="declararea-sau-definirea-variabilelor"><a class="header" href="#declararea-sau-definirea-variabilelor">Declararea sau definirea variabilelor</a></h3>
+<p>Pentru a opera cu variabile intr-un program, este necesara <code>declararea</code> / <code>definirea</code> acestora. De exemplu prin <code>int x;</code> ii spunem compilatorului ca vom folosi o variabila de tip intreg, cu nume <code>x</code>.</p>
+<p>De exemplu, programul urmator nu va compila cu succes si va arunca o eroare, deoarece variabila 'x' nu este cunoscuta la linia 4:</p>
+<pre><code class="language-C++">1 #include &lt;iostream&gt;
+2 using namespace std;
+3 int main() {
+4     x = 5;
+5    cout &lt;&lt; x &lt;&lt; endl;
+6 }
+</code></pre>
+<p>Putem declara variabile multiple pe aceeasi linie, si variabile de mai multe tipuri:</p>
+<pre><code class="language-C++">int numar1, numar2;
+float numar3, numar4;
+char ch1, ch2;
+</code></pre>
+<p>Codul de mai sus este echivalent cu:</p>
+<pre><code class="language-C++">int numar1;
+int numar2;
+float numar3;
+float numar4;
+char ch1;
+char ch2;
+</code></pre>
+<h3 id="initializarea-variabilelor"><a class="header" href="#initializarea-variabilelor">Initializarea variabilelor</a></h3>
+<p>Variabilele pot fi initializate cu o anumita valoare in momentul in care sunt declarate:</p>
+<pre><code class="language-C++">int contor = 0; // initializare variabila cu valoarea 0
+cout &lt;&lt; "Valoare: " &lt;&lt; contor &lt;&lt; endl;
+</code></pre>
+<pre><code>Valoare: 0
+</code></pre>
+<p>Este echivalent cu a scrie:</p>
+<pre><code class="language-C++">int contor;
+contor = 0;
+cout &lt;&lt; "Valoare: " &lt;&lt; contor &lt;&lt; endl;
+</code></pre>
+<p>Variabilele declarate dar neinitializate stocheaza in general o valoare aleatorie. De exemplu, daca rulati urmatorul program care afiseaza o variabila neinitializata:</p>
+<pre><code class="language-C++">int var1;
+cout &lt;&lt; "Variabila neinitializata: " &lt;&lt; var1 &lt;&lt; endl;
+</code></pre>
+<p>Va afisa o valoare aleatorie cuprinsa in intervalul <code>[–2147483648, 2147483647]</code>.</p>
+<h3 id="atribuirea"><a class="header" href="#atribuirea">Atribuirea</a></h3>
+<p>Variabilele pot fi setate cu o anumita valoare folosing operatorul de atribuire (<code>=</code>):</p>
+<pre><code class="language-C++">int x1, x2;
+float y1, y2;
+x1 = 23;
+x2 = 44;
+x1 = 55;
+y1 = 2.3;
+y2 = -3.2;
+
+cout &lt;&lt; x1 &lt;&lt; " " &lt;&lt; x2 &lt;&lt; " " &lt;&lt; y1 &lt;&lt; " " &lt;&lt; y2;
+</code></pre>
+<pre><code>55 44 2.3 -3.2
+</code></pre>
+<p>Observati ca variabilei <code>x1</code> i-a fost atribuita valoarea <code>23</code> si apoi valoarea <code>55</code>. Variabilele retin doar ultima valoare atribuita.</p>
+<p>Variabilelor le pot fi atribuite valori continute in alte variabile:</p>
+<pre><code class="language-C++">int x1, x2;
+int y1, y2;
+
+x1 = 33;
+x2 = x1; // x2 primeste valoarea stocata in x1, care este 33
+
+x1 = 44;
+y1 = x1; // y1 primeste valoarea stocata in x1, care este 44
+y2 = x2; // y2 primeste valoarea stocata in x2, care este 33
+
+cout &lt;&lt; x1 &lt;&lt; x2 &lt;&lt; y1 &lt;&lt; y2;
+</code></pre>
+<pre><code>44 33 44 33
+</code></pre>
+<h2 id="exercitii-1"><a class="header" href="#exercitii-1">Exercitii</a></h2>
+<ol>
+<li>Ce va afisa urmatorul program:</li>
+</ol>
+<pre><code class="language-C++">1 #include &lt;iostream&gt;
+2 using namespace std;
+3 int main() {
+4     int x1 = 25, x2 = 45, x3;
+5     float y1, y2, y3;
+6     y1 = x3;
+7     y2 = 44.5;
+8     y3 = x2;
+9     y3 = -1.2;
+10    x1 = 4;
+11    cout &lt;&lt; "x1= " &lt;&lt; x1 &lt;&lt; endl;
+12    cout &lt;&lt; "x2= " &lt;&lt; x2 &lt;&lt; endl;
+13    cout &lt;&lt; "x3= " &lt;&lt; x3 &lt;&lt; endl;
+14    cout &lt;&lt; "y1= " &lt;&lt; y1 &lt;&lt; endl;
+15    cout &lt;&lt; "y2= " &lt;&lt; y2 &lt;&lt; endl;
+16    cout &lt;&lt; "y3= " &lt;&lt; y3 &lt;&lt; endl;
+17    return 0;
+18 }
+</code></pre>
+<ol start="2">
+<li>Modificati instructiunea de la linia 10 cu:</li>
+</ol>
+<pre><code>4 = x1;
+</code></pre>
+<p>Ce observati?</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="instructiuni-conditionale"><a class="header" href="#instructiuni-conditionale">Instructiuni conditionale</a></h1>
 <p>TODO</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="instructiuni-repetitive"><a class="header" href="#instructiuni-repetitive">Instructiuni repetitive</a></h1>
