@@ -9,6 +9,7 @@
 - [Primul tau program: Hello world!](01-getting-started/03-hello-world.md)
 - [Comentarii](01-getting-started/04-comentarii.md)
 - [Date: Constante si Variabile](01-getting-started/05-constante-variabile.md)
+- [Citirea datelor de intrare](01-getting-started/06-citirea-datelor-de-intrare.md)
 
 # Control flow
 
