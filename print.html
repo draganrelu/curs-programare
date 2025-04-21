@@ -524,6 +524,12 @@ float numar4;
 char ch1;
 char ch2;
 </code></pre>
+<blockquote>
+<p>Atentie! Aceeasi variabila nu poate fi declarata de mai multe ori! Observati ce eroare produce urmatorul program la compilare:</p>
+</blockquote>
+<pre><code>int numar1;
+int numar1;
+</code></pre>
 <h3 id="initializarea-variabilelor"><a class="header" href="#initializarea-variabilelor">Initializarea variabilelor</a></h3>
 <p>Variabilele pot fi initializate cu o anumita valoare in momentul in care sunt declarate:</p>
 <pre><code class="language-C++">int contor = 0; // initializare variabila cu valoarea 0
@@ -600,6 +606,298 @@ cout &lt;&lt; x1 &lt;&lt; x2 &lt;&lt; y1 &lt;&lt; y2;
 <pre><code>4 = x1;
 </code></pre>
 <p>Ce observati?</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="citirea-datelor-de-intrare"><a class="header" href="#citirea-datelor-de-intrare">Citirea datelor de intrare</a></h1>
+<p>Pana acum am construit programe care afisau mesaje sau date la consola care erau cunoscute in momentul compilarii. Cu alte cuvinte, inainte sa rulam programul, am fi putut anticipa exact care va fi mesajul afisat.</p>
+<p>Pornim de la programul urmator care afiseaza suma a doua numere intregi:</p>
+<pre><code class="language-C++">#include &lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+    int a, b; // declaram doua variabile de tip intreg 'a' si 'b'
+
+    // atribuim niste valori variabilelor 'a' si 'b'
+    a = 55;
+    b = 66;
+
+    int suma; // declaram o variabila noua de tip intreg
+
+    /* atribuim variabilei 'suma', valoarea obtinuta prin
+    adunarea valorilor stocate in variabilele 'a' si 'b' */
+    suma = a + b;
+
+    cout &lt;&lt; "Suma este: " &lt;&lt; suma &lt;&lt; endl;
+
+    return 0;
+}
+</code></pre>
+<pre><code>Suma este: 121
+</code></pre>
+<p>Programul afiseaza suma valorilor stocate in cele doua variabile 'a' si 'b', adica 55 + 66, adica 121.</p>
+<p>Insa, programul de mai sus nu este foarte 'util' deoarece el nu calculeaza suma <em>oricaror doua numere</em>. Ori de cate ori am rula programul de mai sus, el va afisa acelasi lucru, suma celor doua numere <code>55</code> ai <code>66</code>.</p>
+<p>Daca vrem sa calculam suma altor doua numere, de exemplu <code>70</code> si <code>80</code>, ar trebui modificam instructiunile programului si sa atribuim variabilelor <code>a</code> si <code>b</code> noile valori, sa re-compilam si sa re-rulam programul.</p>
+<p>Insa, putem realiza un program care calculeaza suma a oricaror doua numere, fara a fi nevoie sa modificam instructiunile sale. Cu alte cuvinte, un astfel de program poate primi ca <em>date de intrare</em> doua valori intregi si va afisa la consola suma acestora.</p>
+<p>Pentru a introduce date intr-un program putem folosi instructiunea <code>cin</code> (de la console input) din biblioteca <code>iostream</code>. Cu ajutorul acesteia putem <code>citi</code> de la consola cei doi termeni ai sumei astfel:</p>
+<pre><code class="language-C++">#include &lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+    int a, b;
+
+    cout &lt;&lt; "Introduceti valoarea lui a: ";
+    cin &gt;&gt; a;
+    cout &lt;&lt; "Valoarea lui a este: " &lt;&lt; a &lt;&lt; endl;
+
+    cout &lt;&lt; "Introduceti valoarea lui b: ";
+    cin &gt;&gt; b;
+    cout &lt;&lt; "Valoarea lui b este: " &lt;&lt; b &lt;&lt; endl;
+
+    int suma;
+
+    suma = a + b;
+
+    cout &lt;&lt; "Suma este: " &lt;&lt; suma &lt;&lt; endl;
+
+    return 0;
+}
+</code></pre>
+<p>Dupa compilarea si rularea programului de mai sus:</p>
+<ul>
+<li>Instructiunea <code>cout &lt;&lt; "Introduceti valoarea lui a: ";</code> este executata si observam ca la consola se afiseaza mesajul:</li>
+</ul>
+<pre><code>Introduceti valoarea lui a:
+</code></pre>
+<ul>
+<li>
+<p>Executia programului se blocheaza. Acest lucru se intampla multumita instructiunii <code>cin &gt;&gt; a</code>. Practic, programul asteapta acum de la noi sa introducem la consola un numar intreg.</p>
+</li>
+<li>
+<p>Putem introduce orice numar intreg, de exemplu introducem valoarea <code>23</code> la consola si apoi apasam <code>Enter</code>.</p>
+</li>
+</ul>
+<pre><code>Introduceti valoarea lui a: 23
+</code></pre>
+<ul>
+<li>Aceasta valoare este acum stocata in variabila <code>a</code>. Acest lucru este confirmat si de mesajul afisat la consola, in urma executiei instructiunii urmatoare, <code>cout &lt;&lt; "Valoarea lui a este: " &lt;&lt; a &lt;&lt; endl;</code>:</li>
+</ul>
+<pre><code>Valoarea lui a este: 23
+</code></pre>
+<ul>
+<li>Apoi, instructiunea <code>cout &lt;&lt; "Introduceti valoarea lui b: ";</code> este executata si observam ca la consola se afiseaza mesajul:</li>
+</ul>
+<pre><code>Introduceti valoarea lui b:
+</code></pre>
+<ul>
+<li>Si executia programului se blocheaza din nou. Programul acum asteapta de la noi sa citim inca un numar intreg (<code>cin &gt;&gt; b</code>), pe care il va stoca in variabila <code>b</code>. Putem introduce orice numar intreg, de exemplu introducem valoarea <code>57</code> la consola si apoi apasam <code>Enter</code>.</li>
+</ul>
+<pre><code>Introduceti valoarea lui b: 57
+</code></pre>
+<ul>
+<li>Acest lucru este confirmat de urmatorul mesaj care este afisat la consola, in urma executiei instructiunii <code>cout &lt;&lt; "Valoarea lui b este: " &lt;&lt; b &lt;&lt; endl;</code>:</li>
+</ul>
+<pre><code>Valoarea lui b este: 57
+</code></pre>
+<ul>
+<li>Suma valorilor variabilelor <code>a</code> si <code>b</code> va fi apoi stocata in variabila nou declarata <code>suma</code> si apoi afisata:</li>
+</ul>
+<pre><code>Suma este: 80
+</code></pre>
+<ul>
+<li>Executia programului se opreste. Toate mesajele de la consola in urma executiei programului:</li>
+</ul>
+<pre><code>Introduceti valoarea lui a: 23
+Valoarea lui a este: 23
+Introduceti valoarea lui b: 57
+Valoarea lui b este: 57
+Suma este: 80
+</code></pre>
+<p>Daca rulam iar acelasi program, dar introducem alte valori pentru variabilele <code>a</code> si <code>b</code>:</p>
+<pre><code>Introduceti valoarea lui a: 44
+Valoarea lui a este: 44
+Introduceti valoarea lui b: 55
+Valoarea lui b este: 55
+Suma este: 99
+</code></pre>
+<p>Putem introduce si valori mai mari, a caror suma nu este usor de calculat mental. Programul o va calcula pentru noi foarte rapid:</p>
+<pre><code>Introduceti valoarea lui a: 1253432
+Valoarea lui a este: 1253432
+Introduceti valoarea lui b: 66593
+Valoarea lui b este: 66593
+Suma este: 1320025
+</code></pre>
+<p>Mesajele "Introduceti valoarea lui ..." si "Valoarea lui ... este" sunt optionale, le putem elimina din program:</p>
+<pre><code class="language-C++">#include &lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+    int a, b;
+
+    cin &gt;&gt; a;
+    cin &gt;&gt; b;
+
+    int suma;
+
+    suma = a + b;
+
+    cout &lt;&lt; "Suma este: " &lt;&lt; suma &lt;&lt; endl;
+
+    return 0;
+}
+</code></pre>
+<p>Dupa ce compilam si rulam programul de mai sus, observam ca nu se afiseaza niciun mesaj la consola, programul nostru asteptand ca noi sa introducem un numar intreg. Dupa ce introducem un numar intreg, apasam <code>Enter</code>, si apoi programul asteapta cel de-al doilea numar intreg. Introducem al doilea numar intreg si apasam iar <code>Enter</code>, dupa care se afiseaza suma celor doua numere.</p>
+<pre><code>405
+555
+Suma este: 960
+</code></pre>
+<p>Nu este necesar sa introducem numerele intregi pe linii separate, le putem introduce pe aceeasi linie, dar sa fie separate de unul sau mai multe spatii:</p>
+<pre><code>405 555
+Suma este: 960
+</code></pre>
+<pre><code>405     555
+Suma este: 960
+</code></pre>
+<p>Instructiunea <code>cin</code> sare peste toate spatiile / liniile din consola pana gaseste urmatorul numar intreg, pe care il citeste. Putem verifica acest lucru daca rulam programul nostru si apasam <code>Enter</code> si <code>Space</code> ori de cate ori, introducem apoi un numar intreg si repetam procesul pentru cel de-al doilea intreg:</p>
+<pre><code>
+    444
+
+          555
+Suma este: 999
+</code></pre>
+<p>Putem modifica programul de mai sus sa poata lucra cu numere zecimale:</p>
+<pre><code class="language-C++">#include &lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+    float a, b;
+
+    cin &gt;&gt; a;
+    cin &gt;&gt; b;
+
+    float suma;
+
+    suma = a + b;
+
+    cout &lt;&lt; "Suma este: " &lt;&lt; suma &lt;&lt; endl;
+
+    return 0;
+}
+</code></pre>
+<pre><code>23.4 55.4
+Suma este: 78.8
+</code></pre>
+<p>Sau daca vrem sa efectueze suma a 3 numere:</p>
+<pre><code class="language-C++">#include &lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+    float a, b, c;
+
+    cin &gt;&gt; a;
+    cin &gt;&gt; b;
+    cin &gt;&gt; b;
+
+    float suma;
+
+    suma = a + b + c;
+
+    cout &lt;&lt; "Suma este: " &lt;&lt; suma &lt;&lt; endl;
+
+    return 0;
+}
+</code></pre>
+<pre><code>1.1
+2.2
+3.3
+Suma este: 6.6
+</code></pre>
+<p>Instructiunea <code>cin</code> poate accepta mai multe variabile pentru citire pe aceeasi linie, astfel:</p>
+<pre><code class="language-C++">cin &gt;&gt; a &gt;&gt; b &gt;&gt; c;
+</code></pre>
+<p>Este echivalenta cu:</p>
+<pre><code class="language-C++">cin &gt;&gt; a;
+cin &gt;&gt; b;
+cin &gt;&gt; c;
+</code></pre>
+<p>Similar cu <code>cout</code>:</p>
+<pre><code class="language-C++">cout &lt;&lt; "Suma este: " &lt;&lt; suma &lt;&lt; endl;
+</code></pre>
+<p>Care este echivalent cu a scrie:</p>
+<pre><code class="language-C++">cout &lt;&lt; "Suma este: ";
+cout &lt;&lt; suma;
+cout &lt;&lt; endl;
+</code></pre>
+<h1 id="exercitii-2"><a class="header" href="#exercitii-2">Exercitii</a></h1>
+<ol>
+<li>Compilati si rulati urmatorul program si observati ce afiseaza:</li>
+</ol>
+<pre><code class="language-C++">#include &lt;iostream&gt;
+using namespace std;
+int main() {
+    int a;
+    cin &gt;&gt; a;
+    cin &gt;&gt; a;
+    cout &lt;&lt; "Numarul citit de doua ori este: " &lt;&lt; a &lt;&lt; endl;
+    return 0;
+}
+</code></pre>
+<blockquote>
+<p>Explicatie: putem citi de mai multe ori aceeasi variabila; dar cand o afisam, doar ultima valoare stocata in aceasta va fi afisata.</p>
+</blockquote>
+<ol start="2">
+<li>
+<p>Realizati un program care afiseaza suma a 4 numere intregi, citite de la consola.</p>
+</li>
+<li>
+<p>Compilati, rulati si explicati ce face urmatorul program:</p>
+</li>
+</ol>
+<pre><code class="language-C++">#include &lt;iostream&gt;
+using namespace std;
+int main() {
+    int nr1;
+    cout &lt;&lt; "Introduceti primul numar: ";
+    cin &gt;&gt; nr1;
+
+    int nr2;
+    cout &lt;&lt; "Introduceti al doilea numar: ";
+    cin &gt;&gt; nr2;
+
+    int suma;
+    suma = nr1 + nr2;
+    cout &lt;&lt; "Suma primelor doua numere este: " &lt;&lt; suma &lt;&lt; endl;
+
+    int nr3;
+    cout &lt;&lt; "Introduceti al treilea numar: ";
+    cin &gt;&gt; nr3;
+
+    suma = nr1 + nr2 + nr3;
+    cout &lt;&lt; "Suma celor trei numere este: " &lt;&lt; suma &lt;&lt; endl;
+
+    return 0;
+}
+</code></pre>
+<ol start="4">
+<li>Reparati urmatorul program astfel incat acesta sa efectueze suma a 2 numere:</li>
+</ol>
+<pre><code class="language-C++">#include &lt;iostream&gt;
+using namespace std;
+int main() {
+    int nr1, nr2;
+
+    cin &gt;&gt; nr1;
+
+    int suma;
+    suma = nr1 + nr2;
+
+    cout &lt;&lt; "Suma este: " &lt;&lt; suma &lt;&lt; endl;
+
+    return 0;
+}
+</code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="instructiuni-conditionale"><a class="header" href="#instructiuni-conditionale">Instructiuni conditionale</a></h1>
 <p>TODO</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="instructiuni-repetitive"><a class="header" href="#instructiuni-repetitive">Instructiuni repetitive</a></h1>
